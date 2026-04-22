@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Trắc nghiệm Lịch sử 7</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+.question { margin-bottom: 20px; }
+</style>
+</head>
+<body>
+
+<h2>Đề kiểm tra Lịch sử 7 - HK2</h2>
+
+<form id="quiz">
+
+<div class="question">
+<p>Câu 1: Kế sách "vườn không nhà trống" được áp dụng trong lần kháng chiến nào?</p>
+<label><input type="radio" name="q1" value="A"> A. Lần 1</label><br>
+<label><input type="radio" name="q1" value="B"> B. Lần 2</label><br>
+<label><input type="radio" name="q1" value="C"> C. Lần 3</label><br>
+<label><input type="radio" name="q1" value="D"> D. Cả 3 lần</label>
+</div>
+
+<button type="button" onclick="submitQuiz()">Nộp bài</button>
+
+</form>
+
+<h3 id="result"></h3>
+
+<script>
+function submitQuiz() {
+  let score = 0;
+
+  if (document.querySelector('input[name="q1"]:checked')?.value === "D") {
+    score++;
+  }
+
+  document.getElementById("result").innerText = "Điểm: " + score + "/1";
+}
+</script>
+
+</body>
+</html>
